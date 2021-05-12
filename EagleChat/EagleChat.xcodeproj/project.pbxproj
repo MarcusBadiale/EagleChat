@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABE1F1C8264B7952005D4805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F1C7264B7952005D4805 /* AppDelegate.swift */; };
+		ABE1F1CA264B7952005D4805 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F1C9264B7952005D4805 /* SceneDelegate.swift */; };
+		ABE1F1CC264B7952005D4805 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F1CB264B7952005D4805 /* ViewController.swift */; };
+		ABE1F1D1264B7954005D4805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE1F1D0264B7954005D4805 /* Assets.xcassets */; };
+		ABE1F1D4264B7954005D4805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE1F1D2264B7954005D4805 /* LaunchScreen.storyboard */; };
+		ABE1F1DF264B7955005D4805 /* EagleChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F1DE264B7955005D4805 /* EagleChatTests.swift */; };
+		ABE1F1EA264B7955005D4805 /* EagleChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F1E9264B7955005D4805 /* EagleChatUITests.swift */; };
+		ABE1F20B264B7ADD005D4805 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F20A264B7ADD005D4805 /* Coordinator.swift */; };
+		ABE1F213264B7B8D005D4805 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F212264B7B8D005D4805 /* ViewModel.swift */; };
+		ABE1F219264B7BF0005D4805 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F218264B7BF0005D4805 /* BaseViewController.swift */; };
+		ABE1F221264B7C13005D4805 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F220264B7C13005D4805 /* UIView+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABE1F1DB264B7955005D4805 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABE1F1BC264B7952005D4805 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABE1F1C3264B7952005D4805;
+			remoteInfo = EagleChat;
+		};
+		ABE1F1E6264B7955005D4805 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABE1F1BC264B7952005D4805 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABE1F1C3264B7952005D4805;
+			remoteInfo = EagleChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ABE1F1C4264B7952005D4805 /* EagleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE1F1C7264B7952005D4805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ABE1F1C9264B7952005D4805 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ABE1F1CB264B7952005D4805 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ABE1F1D0264B7954005D4805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABE1F1D3264B7954005D4805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ABE1F1D5264B7954005D4805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABE1F1DA264B7955005D4805 /* EagleChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EagleChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE1F1DE264B7955005D4805 /* EagleChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleChatTests.swift; sourceTree = "<group>"; };
+		ABE1F1E0264B7955005D4805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABE1F1E5264B7955005D4805 /* EagleChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EagleChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE1F1E9264B7955005D4805 /* EagleChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleChatUITests.swift; sourceTree = "<group>"; };
+		ABE1F1EB264B7955005D4805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABE1F20A264B7ADD005D4805 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		ABE1F212264B7B8D005D4805 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		ABE1F218264B7BF0005D4805 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		ABE1F220264B7C13005D4805 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABE1F1C1264B7952005D4805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE1F1D7264B7955005D4805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE1F1E2264B7955005D4805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABE1F1BB264B7951005D4805 = {
+			isa = PBXGroup;
+			children = (
+				ABE1F1C6264B7952005D4805 /* EagleChat */,
+				ABE1F1DD264B7955005D4805 /* EagleChatTests */,
+				ABE1F1E8264B7955005D4805 /* EagleChatUITests */,
+				ABE1F1C5264B7952005D4805 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABE1F1C5264B7952005D4805 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABE1F1C4264B7952005D4805 /* EagleChat.app */,
+				ABE1F1DA264B7955005D4805 /* EagleChatTests.xctest */,
+				ABE1F1E5264B7955005D4805 /* EagleChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABE1F1C6264B7952005D4805 /* EagleChat */ = {
+			isa = PBXGroup;
+			children = (
+				ABE1F217264B7BE4005D4805 /* Utils */,
+				ABE1F209264B7AD1005D4805 /* Coordinator */,
+				ABE1F1FD264B79BD005D4805 /* Delegates */,
+				ABE1F201264B79C9005D4805 /* Views */,
+				ABE1F205264B79DE005D4805 /* Support */,
+				ABE1F1D5264B7954005D4805 /* Info.plist */,
+			);
+			path = EagleChat;
+			sourceTree = "<group>";
+		};
+		ABE1F1DD264B7955005D4805 /* EagleChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABE1F1DE264B7955005D4805 /* EagleChatTests.swift */,
+				ABE1F1E0264B7955005D4805 /* Info.plist */,
+			);
+			path = EagleChatTests;
+			sourceTree = "<group>";
+		};
+		ABE1F1E8264B7955005D4805 /* EagleChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ABE1F1E9264B7955005D4805 /* EagleChatUITests.swift */,
+				ABE1F1EB264B7955005D4805 /* Info.plist */,
+			);
+			path = EagleChatUITests;
+			sourceTree = "<group>";
+		};
+		ABE1F1FD264B79BD005D4805 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				ABE1F1C7264B7952005D4805 /* AppDelegate.swift */,
+				ABE1F1C9264B7952005D4805 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		ABE1F201264B79C9005D4805 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ABE1F1CB264B7952005D4805 /* ViewController.swift */,
+				ABE1F212264B7B8D005D4805 /* ViewModel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ABE1F205264B79DE005D4805 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				ABE1F1D0264B7954005D4805 /* Assets.xcassets */,
+				ABE1F1D2264B7954005D4805 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		ABE1F209264B7AD1005D4805 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				ABE1F20A264B7ADD005D4805 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		ABE1F217264B7BE4005D4805 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ABE1F218264B7BF0005D4805 /* BaseViewController.swift */,
+				ABE1F220264B7C13005D4805 /* UIView+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABE1F1C3264B7952005D4805 /* EagleChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE1F1EE264B7955005D4805 /* Build configuration list for PBXNativeTarget "EagleChat" */;
+			buildPhases = (
+				ABE1F1C0264B7952005D4805 /* Sources */,
+				ABE1F1C1264B7952005D4805 /* Frameworks */,
+				ABE1F1C2264B7952005D4805 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EagleChat;
+			productName = EagleChat;
+			productReference = ABE1F1C4264B7952005D4805 /* EagleChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABE1F1D9264B7955005D4805 /* EagleChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE1F1F1264B7955005D4805 /* Build configuration list for PBXNativeTarget "EagleChatTests" */;
+			buildPhases = (
+				ABE1F1D6264B7955005D4805 /* Sources */,
+				ABE1F1D7264B7955005D4805 /* Frameworks */,
+				ABE1F1D8264B7955005D4805 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABE1F1DC264B7955005D4805 /* PBXTargetDependency */,
+			);
+			name = EagleChatTests;
+			productName = EagleChatTests;
+			productReference = ABE1F1DA264B7955005D4805 /* EagleChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ABE1F1E4264B7955005D4805 /* EagleChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE1F1F4264B7955005D4805 /* Build configuration list for PBXNativeTarget "EagleChatUITests" */;
+			buildPhases = (
+				ABE1F1E1264B7955005D4805 /* Sources */,
+				ABE1F1E2264B7955005D4805 /* Frameworks */,
+				ABE1F1E3264B7955005D4805 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABE1F1E7264B7955005D4805 /* PBXTargetDependency */,
+			);
+			name = EagleChatUITests;
+			productName = EagleChatUITests;
+			productReference = ABE1F1E5264B7955005D4805 /* EagleChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABE1F1BC264B7952005D4805 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					ABE1F1C3264B7952005D4805 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					ABE1F1D9264B7955005D4805 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = ABE1F1C3264B7952005D4805;
+					};
+					ABE1F1E4264B7955005D4805 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = ABE1F1C3264B7952005D4805;
+					};
+				};
+			};
+			buildConfigurationList = ABE1F1BF264B7952005D4805 /* Build configuration list for PBXProject "EagleChat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABE1F1BB264B7951005D4805;
+			productRefGroup = ABE1F1C5264B7952005D4805 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABE1F1C3264B7952005D4805 /* EagleChat */,
+				ABE1F1D9264B7955005D4805 /* EagleChatTests */,
+				ABE1F1E4264B7955005D4805 /* EagleChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABE1F1C2264B7952005D4805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE1F1D4264B7954005D4805 /* LaunchScreen.storyboard in Resources */,
+				ABE1F1D1264B7954005D4805 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE1F1D8264B7955005D4805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE1F1E3264B7955005D4805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABE1F1C0264B7952005D4805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE1F213264B7B8D005D4805 /* ViewModel.swift in Sources */,
+				ABE1F221264B7C13005D4805 /* UIView+Extension.swift in Sources */,
+				ABE1F20B264B7ADD005D4805 /* Coordinator.swift in Sources */,
+				ABE1F1CC264B7952005D4805 /* ViewController.swift in Sources */,
+				ABE1F1C8264B7952005D4805 /* AppDelegate.swift in Sources */,
+				ABE1F1CA264B7952005D4805 /* SceneDelegate.swift in Sources */,
+				ABE1F219264B7BF0005D4805 /* BaseViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE1F1D6264B7955005D4805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE1F1DF264B7955005D4805 /* EagleChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE1F1E1264B7955005D4805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE1F1EA264B7955005D4805 /* EagleChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABE1F1DC264B7955005D4805 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABE1F1C3264B7952005D4805 /* EagleChat */;
+			targetProxy = ABE1F1DB264B7955005D4805 /* PBXContainerItemProxy */;
+		};
+		ABE1F1E7264B7955005D4805 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABE1F1C3264B7952005D4805 /* EagleChat */;
+			targetProxy = ABE1F1E6264B7955005D4805 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ABE1F1D2264B7954005D4805 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABE1F1D3264B7954005D4805 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABE1F1EC264B7955005D4805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ABE1F1ED264B7955005D4805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABE1F1EF264B7955005D4805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LZ4KUFVTZH;
+				INFOPLIST_FILE = EagleChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.EagleChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABE1F1F0264B7955005D4805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LZ4KUFVTZH;
+				INFOPLIST_FILE = EagleChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.EagleChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ABE1F1F2264B7955005D4805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LZ4KUFVTZH;
+				INFOPLIST_FILE = EagleChatTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.EagleChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EagleChat.app/EagleChat";
+			};
+			name = Debug;
+		};
+		ABE1F1F3264B7955005D4805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LZ4KUFVTZH;
+				INFOPLIST_FILE = EagleChatTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.EagleChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EagleChat.app/EagleChat";
+			};
+			name = Release;
+		};
+		ABE1F1F5264B7955005D4805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LZ4KUFVTZH;
+				INFOPLIST_FILE = EagleChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.EagleChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EagleChat;
+			};
+			name = Debug;
+		};
+		ABE1F1F6264B7955005D4805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LZ4KUFVTZH;
+				INFOPLIST_FILE = EagleChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.EagleChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EagleChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABE1F1BF264B7952005D4805 /* Build configuration list for PBXProject "EagleChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE1F1EC264B7955005D4805 /* Debug */,
+				ABE1F1ED264B7955005D4805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABE1F1EE264B7955005D4805 /* Build configuration list for PBXNativeTarget "EagleChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE1F1EF264B7955005D4805 /* Debug */,
+				ABE1F1F0264B7955005D4805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABE1F1F1264B7955005D4805 /* Build configuration list for PBXNativeTarget "EagleChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE1F1F2264B7955005D4805 /* Debug */,
+				ABE1F1F3264B7955005D4805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABE1F1F4264B7955005D4805 /* Build configuration list for PBXNativeTarget "EagleChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE1F1F5264B7955005D4805 /* Debug */,
+				ABE1F1F6264B7955005D4805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABE1F1BC264B7952005D4805 /* Project object */;
+}
