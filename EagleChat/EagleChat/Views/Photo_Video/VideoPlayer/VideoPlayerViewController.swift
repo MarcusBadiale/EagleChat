@@ -1,19 +1,19 @@
 //
-//  ViewController.swift
+//  VideoPlayerViewController.swift
 //  EagleChat
 //
-//  Created by Marcus Vinicius Vieira Badiale on 11/05/21.
+//  Created by Marcus Vinicius Vieira Badiale on 12/05/21.
 //
 
 import UIKit
 
-final class ViewController: BaseViewController<UIView> {
+final class VideoPlayerViewController: BaseViewController<VideoPlayerView> {
 
     // MARK: - Private variables
-    private let viewModel: ViewModel
+    private let viewModel: VideoPlayerViewModel
     
     // MARK: - Init
-    init(viewModel: ViewModel) {
+    init(viewModel: VideoPlayerViewModel) {
         self.viewModel = viewModel
         super.init()
     }
@@ -25,10 +25,10 @@ final class ViewController: BaseViewController<UIView> {
     }
 }
 
-extension ViewController {
+extension VideoPlayerViewController {
     
     // MARK: - Private methods
     private func setup() {
-        view.backgroundColor = .red
+        view.backgroundColor = .white
     }
 }

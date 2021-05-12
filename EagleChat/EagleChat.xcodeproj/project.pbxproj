@@ -3,21 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA362AE657D0E47F8174643F /* Pods_EagleChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81630D7EAA864B3D05DB253 /* Pods_EagleChat.framework */; };
+		AB2BB49D264B8D6F0064F582 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB49A264B8D6F0064F582 /* LoginViewController.swift */; };
+		AB2BB49E264B8D6F0064F582 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB49B264B8D6F0064F582 /* LoginView.swift */; };
+		AB2BB49F264B8D6F0064F582 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB49C264B8D6F0064F582 /* LoginViewModel.swift */; };
+		AB2BB4A3264B8DC00064F582 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4A0264B8DC00064F582 /* ChatViewController.swift */; };
+		AB2BB4A4264B8DC00064F582 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4A1264B8DC00064F582 /* ChatView.swift */; };
+		AB2BB4A5264B8DC00064F582 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4A2264B8DC00064F582 /* ChatViewModel.swift */; };
+		AB2BB4B1264B8EE70064F582 /* PhotoViwerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4AE264B8EE70064F582 /* PhotoViwerViewController.swift */; };
+		AB2BB4B2264B8EE70064F582 /* PhotoViwerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4AF264B8EE70064F582 /* PhotoViwerView.swift */; };
+		AB2BB4B3264B8EE70064F582 /* PhotoViwerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4B0264B8EE70064F582 /* PhotoViwerViewModel.swift */; };
+		AB2BB4B8264B8EF40064F582 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4B5264B8EF40064F582 /* VideoPlayerViewController.swift */; };
+		AB2BB4B9264B8EF40064F582 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4B6264B8EF40064F582 /* VideoPlayerView.swift */; };
+		AB2BB4BA264B8EF40064F582 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4B7264B8EF40064F582 /* VideoPlayerViewModel.swift */; };
+		AB2BB4C1264B8F240064F582 /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4BE264B8F240064F582 /* NewChatViewController.swift */; };
+		AB2BB4C2264B8F240064F582 /* NewChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4BF264B8F240064F582 /* NewChatView.swift */; };
+		AB2BB4C3264B8F240064F582 /* NewChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4C0264B8F240064F582 /* NewChatViewModel.swift */; };
+		AB2BB4C8264B8F3E0064F582 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4C5264B8F3E0064F582 /* ProfileViewController.swift */; };
+		AB2BB4C9264B8F3E0064F582 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4C6264B8F3E0064F582 /* ProfileView.swift */; };
+		AB2BB4CA264B8F3E0064F582 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4C7264B8F3E0064F582 /* ProfileViewModel.swift */; };
+		AB2BB4D0264B90660064F582 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4CD264B90660064F582 /* RegisterViewController.swift */; };
+		AB2BB4D1264B90660064F582 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4CE264B90660064F582 /* RegisterView.swift */; };
+		AB2BB4D2264B90660064F582 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4CF264B90660064F582 /* RegisterViewModel.swift */; };
+		AB2BB4D4264BA1570064F582 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB2BB4D3264BA1570064F582 /* GoogleService-Info.plist */; };
+		AB7D8946264C70E70061DA14 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D8943264C70E70061DA14 /* ConversationViewController.swift */; };
+		AB7D8947264C70E70061DA14 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D8944264C70E70061DA14 /* ConversationView.swift */; };
+		AB7D8948264C70E70061DA14 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D8945264C70E70061DA14 /* ConversationViewModel.swift */; };
+		AB7D894B264C71A60061DA14 /* ErrorOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D894A264C71A60061DA14 /* ErrorOverlay.swift */; };
+		ABC0CA62264C78720028218A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0CA61264C78720028218A /* Message.swift */; };
+		ABCA84CA264BAFDA0007CBFC /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA84C9264BAFDA0007CBFC /* DatabaseManager.swift */; };
+		ABCA84D0264BC54A0007CBFC /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA84CF264BC54A0007CBFC /* ProfileTableViewCell.swift */; };
 		ABE1F1C8264B7952005D4805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F1C7264B7952005D4805 /* AppDelegate.swift */; };
 		ABE1F1CA264B7952005D4805 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F1C9264B7952005D4805 /* SceneDelegate.swift */; };
-		ABE1F1CC264B7952005D4805 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F1CB264B7952005D4805 /* ViewController.swift */; };
 		ABE1F1D1264B7954005D4805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE1F1D0264B7954005D4805 /* Assets.xcassets */; };
 		ABE1F1D4264B7954005D4805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE1F1D2264B7954005D4805 /* LaunchScreen.storyboard */; };
 		ABE1F1DF264B7955005D4805 /* EagleChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F1DE264B7955005D4805 /* EagleChatTests.swift */; };
 		ABE1F1EA264B7955005D4805 /* EagleChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F1E9264B7955005D4805 /* EagleChatUITests.swift */; };
 		ABE1F20B264B7ADD005D4805 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F20A264B7ADD005D4805 /* Coordinator.swift */; };
-		ABE1F213264B7B8D005D4805 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F212264B7B8D005D4805 /* ViewModel.swift */; };
 		ABE1F219264B7BF0005D4805 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F218264B7BF0005D4805 /* BaseViewController.swift */; };
 		ABE1F221264B7C13005D4805 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F220264B7C13005D4805 /* UIView+Extension.swift */; };
+		B4655FA31591F70EC74DF00E /* Pods_EagleChat_EagleChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F969A2F6C8A2D23D02DB4F3 /* Pods_EagleChat_EagleChatUITests.framework */; };
+		C961693C0B1B630DB29A7901 /* Pods_EagleChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3C78EA427B02A965FC36AA /* Pods_EagleChatTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +68,45 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F969A2F6C8A2D23D02DB4F3 /* Pods_EagleChat_EagleChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EagleChat_EagleChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11AB2801FBB1B0F9E0676484 /* Pods-EagleChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EagleChat.debug.xcconfig"; path = "Target Support Files/Pods-EagleChat/Pods-EagleChat.debug.xcconfig"; sourceTree = "<group>"; };
+		4A1023B4297119C01CED0BD5 /* Pods-EagleChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EagleChatTests.release.xcconfig"; path = "Target Support Files/Pods-EagleChatTests/Pods-EagleChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A289AFA60EEDBF834A42FC8 /* Pods-EagleChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EagleChatTests.debug.xcconfig"; path = "Target Support Files/Pods-EagleChatTests/Pods-EagleChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E05717E30AC200645AD30E7 /* Pods-EagleChat-EagleChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EagleChat-EagleChatUITests.release.xcconfig"; path = "Target Support Files/Pods-EagleChat-EagleChatUITests/Pods-EagleChat-EagleChatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9D7A76C5F266943D943224BE /* Pods-EagleChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EagleChat.release.xcconfig"; path = "Target Support Files/Pods-EagleChat/Pods-EagleChat.release.xcconfig"; sourceTree = "<group>"; };
+		AAF1AC80724BF0DEDA7E1EFB /* Pods-EagleChat-EagleChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EagleChat-EagleChatUITests.debug.xcconfig"; path = "Target Support Files/Pods-EagleChat-EagleChatUITests/Pods-EagleChat-EagleChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB2BB49A264B8D6F0064F582 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AB2BB49B264B8D6F0064F582 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AB2BB49C264B8D6F0064F582 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AB2BB4A0264B8DC00064F582 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		AB2BB4A1264B8DC00064F582 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		AB2BB4A2264B8DC00064F582 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		AB2BB4AE264B8EE70064F582 /* PhotoViwerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViwerViewController.swift; sourceTree = "<group>"; };
+		AB2BB4AF264B8EE70064F582 /* PhotoViwerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViwerView.swift; sourceTree = "<group>"; };
+		AB2BB4B0264B8EE70064F582 /* PhotoViwerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViwerViewModel.swift; sourceTree = "<group>"; };
+		AB2BB4B5264B8EF40064F582 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		AB2BB4B6264B8EF40064F582 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		AB2BB4B7264B8EF40064F582 /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		AB2BB4BE264B8F240064F582 /* NewChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
+		AB2BB4BF264B8F240064F582 /* NewChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatView.swift; sourceTree = "<group>"; };
+		AB2BB4C0264B8F240064F582 /* NewChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatViewModel.swift; sourceTree = "<group>"; };
+		AB2BB4C5264B8F3E0064F582 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AB2BB4C6264B8F3E0064F582 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AB2BB4C7264B8F3E0064F582 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		AB2BB4CD264B90660064F582 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AB2BB4CE264B90660064F582 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		AB2BB4CF264B90660064F582 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		AB2BB4D3264BA1570064F582 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB7D8943264C70E70061DA14 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		AB7D8944264C70E70061DA14 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		AB7D8945264C70E70061DA14 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
+		AB7D894A264C71A60061DA14 /* ErrorOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorOverlay.swift; sourceTree = "<group>"; };
+		ABC0CA61264C78720028218A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		ABCA84C9264BAFDA0007CBFC /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		ABCA84CF264BC54A0007CBFC /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		ABE1F1C4264B7952005D4805 /* EagleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE1F1C7264B7952005D4805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE1F1C9264B7952005D4805 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ABE1F1CB264B7952005D4805 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABE1F1D0264B7954005D4805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABE1F1D3264B7954005D4805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABE1F1D5264B7954005D4805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,9 +117,10 @@
 		ABE1F1E9264B7955005D4805 /* EagleChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleChatUITests.swift; sourceTree = "<group>"; };
 		ABE1F1EB264B7955005D4805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABE1F20A264B7ADD005D4805 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		ABE1F212264B7B8D005D4805 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		ABE1F218264B7BF0005D4805 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		ABE1F220264B7C13005D4805 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		BA3C78EA427B02A965FC36AA /* Pods_EagleChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EagleChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E81630D7EAA864B3D05DB253 /* Pods_EagleChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EagleChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA362AE657D0E47F8174643F /* Pods_EagleChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C961693C0B1B630DB29A7901 /* Pods_EagleChatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +144,162 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4655FA31591F70EC74DF00E /* Pods_EagleChat_EagleChatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34C3B8702EFED2B215FF45DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E81630D7EAA864B3D05DB253 /* Pods_EagleChat.framework */,
+				0F969A2F6C8A2D23D02DB4F3 /* Pods_EagleChat_EagleChatUITests.framework */,
+				BA3C78EA427B02A965FC36AA /* Pods_EagleChatTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D9483382E78C63955DA4541 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11AB2801FBB1B0F9E0676484 /* Pods-EagleChat.debug.xcconfig */,
+				9D7A76C5F266943D943224BE /* Pods-EagleChat.release.xcconfig */,
+				AAF1AC80724BF0DEDA7E1EFB /* Pods-EagleChat-EagleChatUITests.debug.xcconfig */,
+				6E05717E30AC200645AD30E7 /* Pods-EagleChat-EagleChatUITests.release.xcconfig */,
+				5A289AFA60EEDBF834A42FC8 /* Pods-EagleChatTests.debug.xcconfig */,
+				4A1023B4297119C01CED0BD5 /* Pods-EagleChatTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB2BB480264B800A0064F582 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D8942264C70D90061DA14 /* Conversation */,
+				AB2BB4BD264B8F180064F582 /* NewChat */,
+				AB2BB4BC264B8F120064F582 /* Chat */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		AB2BB48D264B8B400064F582 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AB2BB4CC264B905C0064F582 /* Register */,
+				AB2BB4CB264B90530064F582 /* Login */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AB2BB4A6264B8EA00064F582 /* Photo_Video */ = {
+			isa = PBXGroup;
+			children = (
+				AB2BB4B4264B8EEB0064F582 /* VideoPlayer */,
+				AB2BB4AD264B8EC90064F582 /* PhotoViwer */,
+			);
+			path = Photo_Video;
+			sourceTree = "<group>";
+		};
+		AB2BB4AD264B8EC90064F582 /* PhotoViwer */ = {
+			isa = PBXGroup;
+			children = (
+				AB2BB4AE264B8EE70064F582 /* PhotoViwerViewController.swift */,
+				AB2BB4AF264B8EE70064F582 /* PhotoViwerView.swift */,
+				AB2BB4B0264B8EE70064F582 /* PhotoViwerViewModel.swift */,
+			);
+			path = PhotoViwer;
+			sourceTree = "<group>";
+		};
+		AB2BB4B4264B8EEB0064F582 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				AB2BB4B5264B8EF40064F582 /* VideoPlayerViewController.swift */,
+				AB2BB4B6264B8EF40064F582 /* VideoPlayerView.swift */,
+				AB2BB4B7264B8EF40064F582 /* VideoPlayerViewModel.swift */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		AB2BB4BC264B8F120064F582 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				AB2BB4A0264B8DC00064F582 /* ChatViewController.swift */,
+				AB2BB4A1264B8DC00064F582 /* ChatView.swift */,
+				AB2BB4A2264B8DC00064F582 /* ChatViewModel.swift */,
+				ABC0CA61264C78720028218A /* Message.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		AB2BB4BD264B8F180064F582 /* NewChat */ = {
+			isa = PBXGroup;
+			children = (
+				AB2BB4BE264B8F240064F582 /* NewChatViewController.swift */,
+				AB2BB4BF264B8F240064F582 /* NewChatView.swift */,
+				AB2BB4C0264B8F240064F582 /* NewChatViewModel.swift */,
+			);
+			path = NewChat;
+			sourceTree = "<group>";
+		};
+		AB2BB4C4264B8F330064F582 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AB2BB4C5264B8F3E0064F582 /* ProfileViewController.swift */,
+				AB2BB4C6264B8F3E0064F582 /* ProfileView.swift */,
+				AB2BB4C7264B8F3E0064F582 /* ProfileViewModel.swift */,
+				ABCA84CF264BC54A0007CBFC /* ProfileTableViewCell.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		AB2BB4CB264B90530064F582 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AB2BB49A264B8D6F0064F582 /* LoginViewController.swift */,
+				AB2BB49B264B8D6F0064F582 /* LoginView.swift */,
+				AB2BB49C264B8D6F0064F582 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AB2BB4CC264B905C0064F582 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				AB2BB4CD264B90660064F582 /* RegisterViewController.swift */,
+				AB2BB4CE264B90660064F582 /* RegisterView.swift */,
+				AB2BB4CF264B90660064F582 /* RegisterViewModel.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		AB7D8942264C70D90061DA14 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D8943264C70E70061DA14 /* ConversationViewController.swift */,
+				AB7D8944264C70E70061DA14 /* ConversationView.swift */,
+				AB7D8945264C70E70061DA14 /* ConversationViewModel.swift */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
+		AB7D8949264C719B0061DA14 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D894A264C71A60061DA14 /* ErrorOverlay.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		ABCA84C8264BAFCA0007CBFC /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				ABCA84C9264BAFDA0007CBFC /* DatabaseManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		ABE1F1BB264B7951005D4805 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +307,8 @@
 				ABE1F1DD264B7955005D4805 /* EagleChatTests */,
 				ABE1F1E8264B7955005D4805 /* EagleChatUITests */,
 				ABE1F1C5264B7952005D4805 /* Products */,
+				8D9483382E78C63955DA4541 /* Pods */,
+				34C3B8702EFED2B215FF45DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,12 +325,14 @@
 		ABE1F1C6264B7952005D4805 /* EagleChat */ = {
 			isa = PBXGroup;
 			children = (
+				ABCA84C8264BAFCA0007CBFC /* Database */,
 				ABE1F217264B7BE4005D4805 /* Utils */,
 				ABE1F209264B7AD1005D4805 /* Coordinator */,
-				ABE1F1FD264B79BD005D4805 /* Delegates */,
+				ABE1F1FD264B79BD005D4805 /* Resources */,
 				ABE1F201264B79C9005D4805 /* Views */,
 				ABE1F205264B79DE005D4805 /* Support */,
 				ABE1F1D5264B7954005D4805 /* Info.plist */,
+				AB2BB4D3264BA1570064F582 /* GoogleService-Info.plist */,
 			);
 			path = EagleChat;
 			sourceTree = "<group>";
@@ -133,20 +355,23 @@
 			path = EagleChatUITests;
 			sourceTree = "<group>";
 		};
-		ABE1F1FD264B79BD005D4805 /* Delegates */ = {
+		ABE1F1FD264B79BD005D4805 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				ABE1F1C7264B7952005D4805 /* AppDelegate.swift */,
 				ABE1F1C9264B7952005D4805 /* SceneDelegate.swift */,
 			);
-			path = Delegates;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		ABE1F201264B79C9005D4805 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ABE1F1CB264B7952005D4805 /* ViewController.swift */,
-				ABE1F212264B7B8D005D4805 /* ViewModel.swift */,
+				AB7D8949264C719B0061DA14 /* Components */,
+				AB2BB4C4264B8F330064F582 /* Profile */,
+				AB2BB4A6264B8EA00064F582 /* Photo_Video */,
+				AB2BB48D264B8B400064F582 /* Login */,
+				AB2BB480264B800A0064F582 /* Chat */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,9 +409,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABE1F1EE264B7955005D4805 /* Build configuration list for PBXNativeTarget "EagleChat" */;
 			buildPhases = (
+				0CDB4670C5033A4E7BFD3DED /* [CP] Check Pods Manifest.lock */,
 				ABE1F1C0264B7952005D4805 /* Sources */,
 				ABE1F1C1264B7952005D4805 /* Frameworks */,
 				ABE1F1C2264B7952005D4805 /* Resources */,
+				092FF4CDEE18F83445A261D4 /* [CP] Embed Pods Frameworks */,
+				3E7D7265D406D61D81B757C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,6 +429,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABE1F1F1264B7955005D4805 /* Build configuration list for PBXNativeTarget "EagleChatTests" */;
 			buildPhases = (
+				EF6278AB4BFEE5FE28C3154D /* [CP] Check Pods Manifest.lock */,
 				ABE1F1D6264B7955005D4805 /* Sources */,
 				ABE1F1D7264B7955005D4805 /* Frameworks */,
 				ABE1F1D8264B7955005D4805 /* Resources */,
@@ -219,9 +448,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABE1F1F4264B7955005D4805 /* Build configuration list for PBXNativeTarget "EagleChatUITests" */;
 			buildPhases = (
+				58BAAF42600E6A0B3A9555B9 /* [CP] Check Pods Manifest.lock */,
 				ABE1F1E1264B7955005D4805 /* Sources */,
 				ABE1F1E2264B7955005D4805 /* Frameworks */,
 				ABE1F1E3264B7955005D4805 /* Resources */,
+				1FA21CC245DD0EB2214AD5BD /* [CP] Embed Pods Frameworks */,
+				A342E116B36B4FC11DCC9BA8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,6 +514,7 @@
 			files = (
 				ABE1F1D4264B7954005D4805 /* LaunchScreen.storyboard in Resources */,
 				ABE1F1D1264B7954005D4805 /* Assets.xcassets in Resources */,
+				AB2BB4D4264BA1570064F582 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,18 +534,181 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		092FF4CDEE18F83445A261D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EagleChat/Pods-EagleChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EagleChat/Pods-EagleChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EagleChat/Pods-EagleChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0CDB4670C5033A4E7BFD3DED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EagleChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FA21CC245DD0EB2214AD5BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EagleChat-EagleChatUITests/Pods-EagleChat-EagleChatUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EagleChat-EagleChatUITests/Pods-EagleChat-EagleChatUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EagleChat-EagleChatUITests/Pods-EagleChat-EagleChatUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E7D7265D406D61D81B757C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EagleChat/Pods-EagleChat-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EagleChat/Pods-EagleChat-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EagleChat/Pods-EagleChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58BAAF42600E6A0B3A9555B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EagleChat-EagleChatUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A342E116B36B4FC11DCC9BA8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EagleChat-EagleChatUITests/Pods-EagleChat-EagleChatUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EagleChat-EagleChatUITests/Pods-EagleChat-EagleChatUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EagleChat-EagleChatUITests/Pods-EagleChat-EagleChatUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF6278AB4BFEE5FE28C3154D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EagleChatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ABE1F1C0264B7952005D4805 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABE1F213264B7B8D005D4805 /* ViewModel.swift in Sources */,
 				ABE1F221264B7C13005D4805 /* UIView+Extension.swift in Sources */,
+				ABCA84D0264BC54A0007CBFC /* ProfileTableViewCell.swift in Sources */,
+				AB2BB4C1264B8F240064F582 /* NewChatViewController.swift in Sources */,
 				ABE1F20B264B7ADD005D4805 /* Coordinator.swift in Sources */,
-				ABE1F1CC264B7952005D4805 /* ViewController.swift in Sources */,
+				AB2BB4D0264B90660064F582 /* RegisterViewController.swift in Sources */,
+				AB2BB4B2264B8EE70064F582 /* PhotoViwerView.swift in Sources */,
+				ABC0CA62264C78720028218A /* Message.swift in Sources */,
+				AB2BB4A4264B8DC00064F582 /* ChatView.swift in Sources */,
+				AB7D8948264C70E70061DA14 /* ConversationViewModel.swift in Sources */,
+				AB7D8946264C70E70061DA14 /* ConversationViewController.swift in Sources */,
+				AB2BB49E264B8D6F0064F582 /* LoginView.swift in Sources */,
 				ABE1F1C8264B7952005D4805 /* AppDelegate.swift in Sources */,
+				AB2BB49F264B8D6F0064F582 /* LoginViewModel.swift in Sources */,
+				AB2BB4C2264B8F240064F582 /* NewChatView.swift in Sources */,
 				ABE1F1CA264B7952005D4805 /* SceneDelegate.swift in Sources */,
+				AB2BB4D1264B90660064F582 /* RegisterView.swift in Sources */,
+				AB2BB4B1264B8EE70064F582 /* PhotoViwerViewController.swift in Sources */,
+				AB2BB4C3264B8F240064F582 /* NewChatViewModel.swift in Sources */,
 				ABE1F219264B7BF0005D4805 /* BaseViewController.swift in Sources */,
+				AB2BB4A3264B8DC00064F582 /* ChatViewController.swift in Sources */,
+				AB2BB4B3264B8EE70064F582 /* PhotoViwerViewModel.swift in Sources */,
+				AB2BB4CA264B8F3E0064F582 /* ProfileViewModel.swift in Sources */,
+				AB2BB4B8264B8EF40064F582 /* VideoPlayerViewController.swift in Sources */,
+				AB2BB4A5264B8DC00064F582 /* ChatViewModel.swift in Sources */,
+				AB2BB4BA264B8EF40064F582 /* VideoPlayerViewModel.swift in Sources */,
+				AB2BB4D2264B90660064F582 /* RegisterViewModel.swift in Sources */,
+				AB7D894B264C71A60061DA14 /* ErrorOverlay.swift in Sources */,
+				AB2BB4C8264B8F3E0064F582 /* ProfileViewController.swift in Sources */,
+				AB2BB49D264B8D6F0064F582 /* LoginViewController.swift in Sources */,
+				AB2BB4C9264B8F3E0064F582 /* ProfileView.swift in Sources */,
+				AB2BB4B9264B8EF40064F582 /* VideoPlayerView.swift in Sources */,
+				ABCA84CA264BAFDA0007CBFC /* DatabaseManager.swift in Sources */,
+				AB7D8947264C70E70061DA14 /* ConversationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +873,7 @@
 		};
 		ABE1F1EF264B7955005D4805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11AB2801FBB1B0F9E0676484 /* Pods-EagleChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -496,6 +893,7 @@
 		};
 		ABE1F1F0264B7955005D4805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D7A76C5F266943D943224BE /* Pods-EagleChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -515,6 +913,7 @@
 		};
 		ABE1F1F2264B7955005D4805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A289AFA60EEDBF834A42FC8 /* Pods-EagleChatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -537,6 +936,7 @@
 		};
 		ABE1F1F3264B7955005D4805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A1023B4297119C01CED0BD5 /* Pods-EagleChatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -559,6 +959,7 @@
 		};
 		ABE1F1F5264B7955005D4805 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAF1AC80724BF0DEDA7E1EFB /* Pods-EagleChat-EagleChatUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -579,6 +980,7 @@
 		};
 		ABE1F1F6264B7955005D4805 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E05717E30AC200645AD30E7 /* Pods-EagleChat-EagleChatUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

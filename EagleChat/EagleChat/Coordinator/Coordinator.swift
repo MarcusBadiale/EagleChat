@@ -21,15 +21,49 @@ final class Coordinator: NSObject {
         window.rootViewController =  navigationController
         window.makeKeyAndVisible()
         
-        routeToVc()
+        routeToConversations()
     }
 }
 
 extension Coordinator {
+    func routeToConversations() {
+        let viewModel = ConversationViewModel(coordinator: self)
+        let viewController = ConversationViewController(viewModel: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
     
-    func routeToVc() {
-        let viewModel = ViewModel(coordinator: self)
-        let viewController = ViewController(viewModel: viewModel)
+    func routeToLogin() {
+        let viewModel = LoginViewModel(coordinator: self)
+        let viewController = LoginViewController(viewModel: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func routeToRegister() {
+        let viewModel = RegisterViewModel(coordinator: self)
+        let viewController = RegisterViewController(viewModel: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func routeToChat() {
+        let viewModel = ChatViewModel(coordinator: self)
+        let viewController = ChatViewController(viewModel: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func routeToProfile() {
+        let viewModel = ProfileViewModel(coordinator: self)
+        let viewController = ProfileViewController(viewModel: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func routeToNewChat() {
+        let viewModel = NewChatViewModel(coordinator: self)
+        let viewController = NewChatViewController(viewModel: viewModel)
         
         navigationController.pushViewController(viewController, animated: true)
     }
