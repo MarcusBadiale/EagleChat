@@ -16,6 +16,7 @@ pod 'GoogleSignIn'
 pod 'MessageKit'
 pod 'JGProgressHUD'
 pod 'SDWebImage'
+pod 'RealmSwift'
 
   target 'EagleChatTests' do
     inherit! :search_paths
