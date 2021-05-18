@@ -26,15 +26,22 @@ extension ConversationViewModel {
         }
     }
     
-    func goToChat() {
-        coordinator.routeToChat()
+    func goToChat(user: [String:String], isNewConversation: Bool) {
+        coordinator.routeToChat(user: user, isNewConversation: isNewConversation)
     }
     
     func goToNewChat() {
-        coordinator.routeToNewChat()
+        coordinator.routeToNewChat(delegate: self)
     }
     
     func goToProfile() {
         coordinator.routeToProfile()
+    }
+}
+
+extension ConversationViewModel: NewChatDelegate {
+    func completion(result: [String : String]) {
+        print("\(result)")
+        goToChat(user: result, isNewConversation: true)
     }
 }

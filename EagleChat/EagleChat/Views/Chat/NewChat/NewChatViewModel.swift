@@ -22,3 +22,7 @@ final class NewChatViewModel {
         self.coordinator = coordinator
     }
 }
+
+extension NewChatViewModel {
+    
+}

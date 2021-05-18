@@ -7,10 +7,16 @@
 
 import UIKit
 
+public protocol NewChatDelegate: AnyObject {
+    func completion(result:[String:String])
+}
+
 final class NewChatViewController: BaseViewController<NewChatView> {
 
     // MARK: - Private variables
     private let viewModel: NewChatViewModel
+    
+    weak var delegate: NewChatDelegate?
     
     // MARK: - Init
     init(viewModel: NewChatViewModel) {
@@ -71,6 +77,8 @@ extension NewChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         // Start Conversation
+        self.navigationController?.popViewController(animated: false)
+        delegate?.completion(result: viewModel.filteredUsers[indexPath.row])
     }
 }
 
