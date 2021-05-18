@@ -48,12 +48,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             return
         }
         
+        let chatUser = ChatAppUser(firstName: firstName, lastName: lastName, email: email)
+        
         DatabaseManager.shared.userExists(with: email) { exists in
             if !exists {
                 // Insert to database
-                DatabaseManager.shared.insertUser(with: .init(firstName: firstName,
-                                                              lastName: lastName,
-                                                              email: email))
+                DatabaseManager.shared.insertUser(
+                    with: chatUser
+                ) { success in
+                    if success {
+                        // upload image
+                        if user.profile.hasImage {
+                            guard let url = user.profile.imageURL(withDimension: 100) else {
+                                return
+                            }
+                            
+                            let fileName = chatUser.profilePictureFileName
+                            
+                            URLSession.shared.dataTask(with: url) { data, _, _ in
+                                guard let data = data else {
+                                    return
+                                }
+                                StorageManager.shared.uploadProfilePicture(
+                                    with: data,
+                                    filename: fileName
+                                ) { result in
+                                    switch result {
+                                    case let .success(urlString):
+                                        UserDefaults.standard.set(urlString, forKey: "profile_picture_url")
+                                        print(urlString)
+                                        
+                                    case let .failure(error):
+                                        print(error)
+                                    }
+                                }
+                            }.resume()
+                        }
+                    }
+                }
             }
         }
         

@@ -11,15 +11,21 @@ import JGProgressHUD
 final class RegisterView: UIView {
     
     // MARK: - Private variables
-    private lazy var logoImageView: UIImageView = {
-        let view = UIImageView()
-        view.image = UIImage(named: "LogoPlaceholder")
-        view.contentMode = .scaleAspectFit
-        return view
-    }()
     
     //MARK: - Internal variables
     lazy var spinner = JGProgressHUD(style: .dark)
+    
+    lazy var logoImageView: UIButton = {
+        let view = UIButton()
+        view.setBackgroundImage(UIImage(systemName: "person.circle.fill"), for: .normal)
+        view.backgroundColor = .white
+        view.tintColor = .gray
+        view.contentMode = .scaleAspectFit
+        view.layer.cornerRadius = K.buttonWidth / 2
+        view.layer.masksToBounds = true
+        view.clipsToBounds = true
+        return view
+    }()
     
     lazy var firstNameTextField: UITextField = {
         let view = UITextField()
@@ -109,9 +115,9 @@ extension RegisterView {
             logoImageView.topAnchor
                 .constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
             logoImageView.widthAnchor
-                .constraint(equalToConstant: 100),
+                .constraint(equalToConstant: K.buttonWidth),
             logoImageView.heightAnchor
-                .constraint(equalToConstant: 100),
+                .constraint(equalToConstant: K.buttonWidth),
             logoImageView.centerXAnchor
                 .constraint(equalTo: centerXAnchor),
             
@@ -150,5 +156,11 @@ extension RegisterView {
             RegisterButton.trailingAnchor
                 .constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
         ])
+    }
+}
+
+extension RegisterView {
+    enum K {
+        static let buttonWidth:CGFloat = 100
     }
 }

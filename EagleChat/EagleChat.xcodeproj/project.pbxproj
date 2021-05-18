@@ -30,6 +30,7 @@
 		AB2BB4D1264B90660064F582 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4CE264B90660064F582 /* RegisterView.swift */; };
 		AB2BB4D2264B90660064F582 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2BB4CF264B90660064F582 /* RegisterViewModel.swift */; };
 		AB2BB4D4264BA1570064F582 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB2BB4D3264BA1570064F582 /* GoogleService-Info.plist */; };
+		AB6C4A09265377EB008B3F0F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C4A08265377EB008B3F0F /* StorageManager.swift */; };
 		AB7D8946264C70E70061DA14 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D8943264C70E70061DA14 /* ConversationViewController.swift */; };
 		AB7D8947264C70E70061DA14 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D8944264C70E70061DA14 /* ConversationView.swift */; };
 		AB7D8948264C70E70061DA14 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D8945264C70E70061DA14 /* ConversationViewModel.swift */; };
@@ -97,6 +98,7 @@
 		AB2BB4CE264B90660064F582 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		AB2BB4CF264B90660064F582 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		AB2BB4D3264BA1570064F582 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB6C4A08265377EB008B3F0F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		AB7D8943264C70E70061DA14 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		AB7D8944264C70E70061DA14 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		AB7D8945264C70E70061DA14 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				ABCA84C9264BAFDA0007CBFC /* DatabaseManager.swift */,
+				AB6C4A08265377EB008B3F0F /* StorageManager.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				ABE1F1CA264B7952005D4805 /* SceneDelegate.swift in Sources */,
 				AB2BB4D1264B90660064F582 /* RegisterView.swift in Sources */,
 				AB2BB4B1264B8EE70064F582 /* PhotoViwerViewController.swift in Sources */,
+				AB6C4A09265377EB008B3F0F /* StorageManager.swift in Sources */,
 				AB2BB4C3264B8F240064F582 /* NewChatViewModel.swift in Sources */,
 				ABE1F219264B7BF0005D4805 /* BaseViewController.swift in Sources */,
 				AB2BB4A3264B8DC00064F582 /* ChatViewController.swift in Sources */,

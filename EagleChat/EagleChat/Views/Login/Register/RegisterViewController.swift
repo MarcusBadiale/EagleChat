@@ -41,8 +41,11 @@ extension RegisterViewController {
     
     func addTargets() {
         customView.RegisterButton.addTarget(self,
-                                         action: #selector(didTapRegisterButton),
-                                         for: .touchUpInside)
+                                            action: #selector(didTapRegisterButton),
+                                            for: .touchUpInside)
+        customView.logoImageView.addTarget(self,
+                                           action: #selector(didTapImageView),
+                                           for: .touchUpInside)
     }
     
     func addDelegates() {
@@ -53,6 +56,11 @@ extension RegisterViewController {
 
 // MARK: - Actions
 extension RegisterViewController {
+    @objc
+    func didTapImageView() {
+        presentPhotoActionSheet()
+    }
+    
     @objc
     func didTapRegisterButton() {
         guard let email = customView.emailTextField.text,
@@ -83,9 +91,34 @@ extension RegisterViewController {
                 
                 self?.customView.hideSpinner()
                 
-                DatabaseManager.shared.insertUser(with: .init(firstName: firstName,
-                                                              lastName: lastName,
-                                                              email: email))
+                let chatUser = ChatAppUser(firstName: firstName, lastName: lastName, email: email)
+                
+                DatabaseManager.shared.insertUser(
+                    with: chatUser
+                ) { success in
+                    if success {
+                        // upload image
+                        guard let image = self?.customView.logoImageView.backgroundImage(for: .normal),
+                              let data = image.pngData() else {
+                            return
+                        }
+                        let fileName = chatUser.profilePictureFileName
+                        StorageManager.shared.uploadProfilePicture(
+                            with: data,
+                            filename: fileName
+                        ) { result in
+                            switch result {
+                            case let .success(urlString):
+                                UserDefaults.standard.set(urlString, forKey: "profile_picture_url")
+                                print(urlString)
+                                
+                            case let .failure(error):
+                                print(error)
+                            }
+                        }
+                        
+                    }
+                }
                 self?.navigationController?.popToRootViewController(animated: true)
             }
         }
@@ -118,4 +151,53 @@ extension RegisterViewController: UITextFieldDelegate {
     }
 }
 
-
+extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func presentPhotoActionSheet() {
+        let actionSheet = UIAlertController(title: "Profile Picture",
+                                            message: nil,
+                                            preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel",
+                                            style: .cancel,
+                                            handler: nil))
+        
+        actionSheet.addAction(UIAlertAction(title: "Take Photo", style: .default) { [weak self] _ in
+            self?.presentCamera()
+        })
+        
+        actionSheet.addAction(UIAlertAction(title: "Choose Photo", style: .default) { [weak self] _ in
+            self?.presentPhotoPicker()
+        })
+        
+        present(actionSheet, animated: true)
+    }
+    
+    func presentCamera() {
+        let vc = UIImagePickerController()
+        vc.sourceType = .camera
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
+    }
+    
+    func presentPhotoPicker() {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+            return
+        }
+        
+        self.customView.logoImageView.setBackgroundImage(image, for: .normal)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
