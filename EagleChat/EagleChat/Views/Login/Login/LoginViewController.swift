@@ -102,6 +102,8 @@ extension LoginViewController {
             }
             
             let user = authResult.user
+            
+            UserDefaults.standard.set(email, forKey: "email")
             self?.customView.hideSpinner()
             self?.navigationController?.popToRootViewController(animated: true)
         }

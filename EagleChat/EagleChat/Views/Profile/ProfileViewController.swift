@@ -38,11 +38,54 @@ extension ProfileViewController {
         title = "Perfil"
         
         setupTableView()
+        loadUserInfo()
     }
     
     private func setupTableView() {
         customView.tableView.delegate = self
         customView.tableView.dataSource = self
+    }
+    
+    func loadUserInfo() {
+        guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
+            return
+        }
+        
+        let safeEmail = DatabaseManager.shared.safeEmail(emailAddress: email)
+        let fileName = safeEmail + "_profile_picture.png"
+        
+        let path = "images/\(fileName)"
+        
+        StorageManager.shared.donwloadURL(for: path) { [weak self] result in
+            switch result {
+            case let .success(url):
+                print(url)
+                self?.donwloadUserImage(url: url)
+                
+            case let .failure(error):
+                print("Failed to get download url: ", error)
+            }
+        }
+        
+        customView.userName.text = safeEmail
+    }
+    
+    func donwloadUserImage(url: URL) {
+        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+            guard error == nil else {
+                return
+            }
+            
+            guard let data = data else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                let image = UIImage(data: data)
+                self?.customView.userImage.image = image
+                self?.customView.layoutSubviews()
+            }
+        }.resume()
     }
 }
 

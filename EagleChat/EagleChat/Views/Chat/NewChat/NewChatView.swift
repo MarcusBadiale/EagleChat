@@ -25,6 +25,7 @@ final class NewChatView: UIView {
     lazy var tableView: UITableView = {
         let view = UITableView()
         view.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        view.isHidden = true
         return view
     }()
     

@@ -41,11 +41,30 @@ final class StorageManager {
             }
         }
     }
+    
+    public func donwloadURL(for path: String, completion: @escaping (Result<URL, Error>) -> Void) {
+        let reference = storage.child(path)
+        
+        reference.downloadURL { url, error in
+            guard error == nil else {
+                completion(.failure(StorageErrors.failedToGetDownloadUrl))
+                return
+            }
+            
+            guard let url = url else {
+                completion(.failure(StorageErrors.failedToUnwrapUrl))
+                return
+            }
+            
+            completion(.success(url))
+        }
+    }
 }
 
 extension StorageManager {
     enum StorageErrors: Error {
         case failedToUpload
         case failedToGetDownloadUrl
+        case failedToUnwrapUrl
     }
 }

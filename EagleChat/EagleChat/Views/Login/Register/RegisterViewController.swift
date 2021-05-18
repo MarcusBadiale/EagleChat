@@ -103,6 +103,7 @@ extension RegisterViewController {
                             return
                         }
                         let fileName = chatUser.profilePictureFileName
+                        let userEmail = chatUser.safeEmail
                         StorageManager.shared.uploadProfilePicture(
                             with: data,
                             filename: fileName
@@ -110,6 +111,7 @@ extension RegisterViewController {
                             switch result {
                             case let .success(urlString):
                                 UserDefaults.standard.set(urlString, forKey: "profile_picture_url")
+                                UserDefaults.standard.set(userEmail, forKey: "email")
                                 print(urlString)
                                 
                             case let .failure(error):

@@ -52,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         DatabaseManager.shared.userExists(with: email) { exists in
             if !exists {
+                UserDefaults.standard.set(email, forKey: "email")
                 // Insert to database
                 DatabaseManager.shared.insertUser(
                     with: chatUser
