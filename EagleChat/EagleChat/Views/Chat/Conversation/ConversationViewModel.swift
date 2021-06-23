@@ -13,6 +13,8 @@ final class ConversationViewModel {
     // MARK: - Private variables
     private let coordinator: Coordinator
     
+    var conversations: [Conversation] = []
+    
     // MARK: - Init
     init(coordinator: Coordinator) {
         self.coordinator = coordinator
@@ -26,8 +28,10 @@ extension ConversationViewModel {
         }
     }
     
-    func goToChat(user: [String:String], isNewConversation: Bool) {
-        coordinator.routeToChat(user: user, isNewConversation: isNewConversation)
+    func goToChat(chatId: String, userName: String, userEmail: String, isNewConversation: Bool) {
+        coordinator.routeToChat(chatId: chatId,
+                                userName: userName, userEmail: userEmail,
+                                isNewConversation: isNewConversation)
     }
     
     func goToNewChat() {
@@ -42,6 +46,10 @@ extension ConversationViewModel {
 extension ConversationViewModel: NewChatDelegate {
     func completion(result: [String : String]) {
         print("\(result)")
-        goToChat(user: result, isNewConversation: true)
+        guard let userName = result["name"],
+              let email = result["email"] else {
+            return
+        }
+        goToChat(chatId: "", userName: userName, userEmail: email, isNewConversation: true)
     }
 }

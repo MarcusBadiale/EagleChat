@@ -33,6 +33,8 @@
 		AB6C4A09265377EB008B3F0F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C4A08265377EB008B3F0F /* StorageManager.swift */; };
 		AB6C4A0B26539FF9008B3F0F /* DatabaseManager+Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C4A0A26539FF9008B3F0F /* DatabaseManager+Chat.swift */; };
 		AB6C4A0D2653A005008B3F0F /* DatabaseManager+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C4A0C2653A005008B3F0F /* DatabaseManager+User.swift */; };
+		AB6C4A0F265ED88B008B3F0F /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C4A0E265ED88B008B3F0F /* ConversationTableViewCell.swift */; };
+		AB6C4A12265EDAAD008B3F0F /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6C4A11265EDAAD008B3F0F /* Conversation.swift */; };
 		AB7D8946264C70E70061DA14 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D8943264C70E70061DA14 /* ConversationViewController.swift */; };
 		AB7D8947264C70E70061DA14 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D8944264C70E70061DA14 /* ConversationView.swift */; };
 		AB7D8948264C70E70061DA14 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7D8945264C70E70061DA14 /* ConversationViewModel.swift */; };
@@ -103,6 +105,8 @@
 		AB6C4A08265377EB008B3F0F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		AB6C4A0A26539FF9008B3F0F /* DatabaseManager+Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatabaseManager+Chat.swift"; sourceTree = "<group>"; };
 		AB6C4A0C2653A005008B3F0F /* DatabaseManager+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatabaseManager+User.swift"; sourceTree = "<group>"; };
+		AB6C4A0E265ED88B008B3F0F /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
+		AB6C4A11265EDAAD008B3F0F /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		AB7D8943264C70E70061DA14 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		AB7D8944264C70E70061DA14 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		AB7D8945264C70E70061DA14 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
@@ -280,12 +284,22 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		AB6C4A10265EDA6C008B3F0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB6C4A11265EDAAD008B3F0F /* Conversation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AB7D8942264C70D90061DA14 /* Conversation */ = {
 			isa = PBXGroup;
 			children = (
+				AB6C4A10265EDA6C008B3F0F /* Model */,
 				AB7D8943264C70E70061DA14 /* ConversationViewController.swift */,
 				AB7D8944264C70E70061DA14 /* ConversationView.swift */,
 				AB7D8945264C70E70061DA14 /* ConversationViewModel.swift */,
+				AB6C4A0E265ED88B008B3F0F /* ConversationTableViewCell.swift */,
 			);
 			path = Conversation;
 			sourceTree = "<group>";
@@ -695,6 +709,7 @@
 				ABC0CA62264C78720028218A /* Message.swift in Sources */,
 				AB2BB4A4264B8DC00064F582 /* ChatView.swift in Sources */,
 				AB7D8948264C70E70061DA14 /* ConversationViewModel.swift in Sources */,
+				AB6C4A12265EDAAD008B3F0F /* Conversation.swift in Sources */,
 				AB7D8946264C70E70061DA14 /* ConversationViewController.swift in Sources */,
 				AB2BB49E264B8D6F0064F582 /* LoginView.swift in Sources */,
 				ABE1F1C8264B7952005D4805 /* AppDelegate.swift in Sources */,
@@ -714,6 +729,7 @@
 				AB2BB4A5264B8DC00064F582 /* ChatViewModel.swift in Sources */,
 				AB2BB4BA264B8EF40064F582 /* VideoPlayerViewModel.swift in Sources */,
 				AB2BB4D2264B90660064F582 /* RegisterViewModel.swift in Sources */,
+				AB6C4A0F265ED88B008B3F0F /* ConversationTableViewCell.swift in Sources */,
 				AB7D894B264C71A60061DA14 /* ErrorOverlay.swift in Sources */,
 				AB2BB4C8264B8F3E0064F582 /* ProfileViewController.swift in Sources */,
 				AB2BB49D264B8D6F0064F582 /* LoginViewController.swift in Sources */,

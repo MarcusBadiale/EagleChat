@@ -59,8 +59,7 @@ extension ProfileViewController {
         StorageManager.shared.donwloadURL(for: path) { [weak self] result in
             switch result {
             case let .success(url):
-                print(url)
-                self?.donwloadUserImage(url: url)
+                self?.customView.userImage.sd_setImage(with: url, completed: nil)
                 
             case let .failure(error):
                 print("Failed to get download url: ", error)
@@ -68,24 +67,6 @@ extension ProfileViewController {
         }
         
         customView.userName.text = safeEmail
-    }
-    
-    func donwloadUserImage(url: URL) {
-        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-            guard error == nil else {
-                return
-            }
-            
-            guard let data = data else {
-                return
-            }
-            
-            DispatchQueue.main.async {
-                let image = UIImage(data: data)
-                self?.customView.userImage.image = image
-                self?.customView.layoutSubviews()
-            }
-        }.resume()
     }
 }
 

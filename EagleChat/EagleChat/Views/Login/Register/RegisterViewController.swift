@@ -112,7 +112,21 @@ extension RegisterViewController {
                             case let .success(urlString):
                                 UserDefaults.standard.set(urlString, forKey: "profile_picture_url")
                                 UserDefaults.standard.set(userEmail, forKey: "email")
-                                print(urlString)
+                                
+                                DatabaseManager.shared.getDataFor(path: userEmail) { result in
+                                    switch result {
+                                    case let .success(value):
+                                        guard let userData = value as? [String: Any],
+                                              let firstName = userData["first_name"] as? String,
+                                              let lastName = userData["last_name"] as? String else {
+                                            return
+                                        }
+                                        UserDefaults.standard.set("\(firstName) \(lastName)", forKey: "name")
+                                        
+                                    case let .failure(error):
+                                        print("failed to read data with error:", error)
+                                    }
+                                }
                                 
                             case let .failure(error):
                                 print(error)

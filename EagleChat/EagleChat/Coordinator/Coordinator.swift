@@ -47,8 +47,10 @@ extension Coordinator {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func routeToChat(user: [String:String], isNewConversation: Bool) {
-        let viewModel = ChatViewModel(coordinator: self, user: user, newConversation: isNewConversation)
+    func routeToChat(chatId: String, userName: String, userEmail: String, isNewConversation: Bool) {
+        let viewModel = ChatViewModel(coordinator: self, chatId: chatId,
+                                      userName: userName, userEmail: userEmail,
+                                      newConversation: isNewConversation)
         let viewController = ChatViewController(viewModel: viewModel)
         
         navigationController.pushViewController(viewController, animated: true)
@@ -65,6 +67,13 @@ extension Coordinator {
         let viewModel = NewChatViewModel(coordinator: self)
         let viewController = NewChatViewController(viewModel: viewModel)
         viewController.delegate = delegate
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func routeToPhotoViwer(imageUrl: URL) {
+        let viewModel = PhotoViwerViewModel(coordinator: self, url: imageUrl)
+        let viewController = PhotoViwerViewController(viewModel: viewModel)
         
         navigationController.pushViewController(viewController, animated: true)
     }

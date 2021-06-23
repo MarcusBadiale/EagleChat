@@ -29,6 +29,7 @@ extension PhotoViwerViewController {
     
     // MARK: - Private methods
     private func setup() {
-        view.backgroundColor = .white
+        navigationItem.largeTitleDisplayMode = .never
+        customView.setImage(imageUrl: viewModel.imageUrl)
     }
 }

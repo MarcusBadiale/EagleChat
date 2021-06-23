@@ -59,6 +59,30 @@ final class StorageManager {
             completion(.success(url))
         }
     }
+    
+    public func updloadChatImage(
+        with data: Data,
+        filename: String,
+        completion: @escaping UploadPictureCompletion
+    ) {
+        storage.child("message_images/\(filename)").putData(data, metadata: nil) { [weak self] metaData, error in
+            guard error == nil else {
+                completion(.failure(StorageErrors.failedToUpload))
+                return
+            }
+            
+            self?.storage.child("message_images/\(filename)").downloadURL { url, error in
+                guard let url = url else {
+                    completion(.failure(StorageErrors.failedToGetDownloadUrl))
+                    return
+                }
+                
+                let urlString = url.absoluteString
+                print("Downloaded url", urlString)
+                completion(.success(urlString))
+            }
+        }
+    }
 }
 
 extension StorageManager {

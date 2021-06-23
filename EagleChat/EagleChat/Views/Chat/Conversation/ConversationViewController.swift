@@ -36,13 +36,19 @@ extension ConversationViewController {
     // MARK: - Private methods
     private func setup() {
         title = "Conversas"
-        view.backgroundColor = .white
         
         addNavButtons()
+        makeNavigationTranslucent()
         fetchConversations()
         setupTableView()
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    private func makeNavigationTranslucent() {
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1529260874, green: 0.1529496312, blue: 0.1529181004, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     private func setupTableView() {
@@ -51,14 +57,17 @@ extension ConversationViewController {
     }
     
     private func addNavButtons() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle"),
-                                                            style: .done,
-                                                            target: self,
-                                                            action: #selector(didTapProfileBtn))
+        let customRightBarButton = UIBarButtonItem(barButtonSystemItem: .compose,
+                                             target: self,
+                                             action: #selector(didTapComposeButton))
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose,
-                                                            target: self,
-                                                            action: #selector(didTapComposeButton))
+        let customLeftBarButton = UIBarButtonItem(image: UIImage(systemName: "person.circle"),
+                                                  style: .done,
+                                                  target: self,
+                                                  action: #selector(didTapProfileBtn))
+        navigationItem.rightBarButtonItem = customRightBarButton
+        navigationItem.leftBarButtonItem = customLeftBarButton
+        
     }
     
     private func showErrorOverlay() {
@@ -70,24 +79,51 @@ extension ConversationViewController {
     }
     
     private func fetchConversations() {
+        guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
+            return
+        }
+        let safeEmail = DatabaseManager.shared.safeEmail(emailAddress: email)
+        DatabaseManager.shared.getAllConversations(for: safeEmail) { [weak self] result in
+            switch result {
+            case let .success(conversations):
+                guard !conversations.isEmpty else {
+                    return
+                }
+                self?.viewModel.conversations = conversations
+                DispatchQueue.main.async {
+                    self?.customView.tableView.reloadData()
+                }
+                
+            case let .failure(error):
+                print("Falhou em pegar conversas: ", error)
+            }
+        }
     }
 }
 
 extension ConversationViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        viewModel.conversations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Teste"
-        cell.accessoryType = .disclosureIndicator
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ConversationTableViewCell.id,
+                                                       for: indexPath) as? ConversationTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        cell.setupCell(with: viewModel.conversations[indexPath.row])
+        cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        viewModel.goToChat(user: [:], isNewConversation: false)
+        let model = viewModel.conversations[indexPath.row]
+        viewModel.goToChat(chatId: model.id,
+                           userName: model.name,
+                           userEmail: model.otherUserEmail,
+                           isNewConversation: false)
     }
 }
 

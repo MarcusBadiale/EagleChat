@@ -12,8 +12,11 @@ final class PhotoViwerViewModel {
     // MARK: - Private variables
     private let coordinator: Coordinator
     
+    var imageUrl: URL
+    
     // MARK: - Init
-    init(coordinator: Coordinator) {
+    init(coordinator: Coordinator, url: URL) {
         self.coordinator = coordinator
+        self.imageUrl = url
     }
 }

@@ -13,9 +13,14 @@ final class ChatViewModel {
     // MARK: - Private variables
     private let coordinator: Coordinator
     
-    let isNewConversation: Bool
+    var isNewConversation: Bool
     let otherUserEmail: String
     let otherUserName: String
+    
+    var otherUserPhotoUrl: URL?
+    var senderPhotoURL: URL?
+    
+    let conversationId: String
     
     public var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
@@ -30,22 +35,28 @@ final class ChatViewModel {
         guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
             return nil
         }
+        let safeEmail = DatabaseManager.shared.safeEmail(emailAddress: email)
         return Sender(photoURL: "",
-                      senderId: email,
-                      displayName: "Marcus")
+                      senderId: safeEmail,
+                      displayName: "Me")
     }
     
     var messages = [Message]()
     
+    
     // MARK: - Init
-    init(coordinator: Coordinator, user: [String:String], newConversation: Bool) {
+    init(coordinator: Coordinator, chatId: String, userName: String, userEmail: String, newConversation: Bool) {
         self.coordinator = coordinator
         
-        otherUserEmail = user["email"] ?? ""
-        otherUserName = user["name"] ?? ""
+        otherUserEmail = userEmail
+        otherUserName = userName
         isNewConversation = newConversation
+        conversationId = chatId
     }
 }
 
 extension ChatViewModel {
+    func goToPhotoViewer(imageUrl: URL) {
+        coordinator.routeToPhotoViwer(imageUrl: imageUrl)
+    }
 }

@@ -101,9 +101,24 @@ extension LoginViewController {
                 return
             }
             
-            let user = authResult.user
+            let safeEmail = DatabaseManager.shared.safeEmail(emailAddress: email)
+            DatabaseManager.shared.getDataFor(path: safeEmail) { result in
+                switch result {
+                case let .success(value):
+                    guard let userData = value as? [String: Any],
+                          let firstName = userData["first_name"] as? String,
+                          let lastName = userData["last_name"] as? String else {
+                        return
+                    }
+                    UserDefaults.standard.set("\(firstName) \(lastName)", forKey: "name")
+                    
+                case let .failure(error):
+                    print("failed to read data with error:", error)
+                }
+            }
             
             UserDefaults.standard.set(email, forKey: "email")
+
             self?.customView.hideSpinner()
             self?.navigationController?.popToRootViewController(animated: true)
         }

@@ -6,10 +6,16 @@
 //
 
 import UIKit
+import SDWebImage
 
 final class PhotoViwerView: UIView {
     
     // MARK: - Private variables
+    private lazy var imageView: UIImageView = {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFit
+        return view
+    }()
     
     //MARK: - Internal variables
     
@@ -28,15 +34,28 @@ final class PhotoViwerView: UIView {
 extension PhotoViwerView {
     
     //MARK: - Internal methods
+    func setImage(imageUrl: URL) {
+        imageView.sd_setImage(with: imageUrl, completed: nil)
+    }
     
     // MARK: - Private methods
     
     private func setupLayout() {
-        backgroundColor = .white
+        backgroundColor = .black
+        
+        addSubview(imageView, constraints: true)
     }
     
     private func createConstraints() {
         NSLayoutConstraint.activate([
+            imageView.topAnchor
+                .constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            imageView.leadingAnchor
+                .constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            imageView.trailingAnchor
+                .constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            imageView.bottomAnchor
+                .constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
         ])
     }
 }
