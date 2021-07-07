@@ -64,7 +64,7 @@ extension DatabaseManager {
                 if var conversations = snapshot.value as? [[String: Any]] {
                     // Append
                     conversations.append(recipiente_newConversationData)
-                    self?.database.child("\(otherUserEmail)/conversations").setValue([conversations])
+                    self?.database.child("\(otherUserEmail)/conversations").setValue(conversations)
                 } else {
                     // create
                     self?.database.child("\(otherUserEmail)/conversations").setValue([recipiente_newConversationData])
