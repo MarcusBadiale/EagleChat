@@ -222,6 +222,7 @@ extension DatabaseManager {
             let currentUserSafeEmail = (self?.safeEmail(emailAddress: currentEmail))!
             let otherUserSafeEmail = (self?.safeEmail(emailAddress: otherUserEmail))!
             let dateString = (self?.dateFormatter.string(from: newMessage.sentDate))!
+//            "Jul 7, 2021 at 6:48:58 PM GMT-3"
             
             var message = ""
             switch newMessage.kind {

@@ -24,19 +24,25 @@ final class LoginView: UIView {
     
     lazy var emailTextField: UITextField = {
         let view = UITextField()
-        view.placeholder = "Email..."
         view.borderStyle = .roundedRect
         view.keyboardType = .emailAddress
         view.returnKeyType = .next
+        view.textColor = .white
+        view.backgroundColor = #colorLiteral(red: 0.3669571579, green: 0.2636830509, blue: 0.3215260208, alpha: 1)
+        view.attributedPlaceholder = NSAttributedString(string: "Email...",
+                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return view
     }()
     
     lazy var passwordTextField: UITextField = {
         let view = UITextField()
-        view.placeholder = "Senha..."
         view.isSecureTextEntry = true
         view.borderStyle = .roundedRect
         view.returnKeyType = .done
+        view.textColor = .white
+        view.backgroundColor = #colorLiteral(red: 0.3669571579, green: 0.2636830509, blue: 0.3215260208, alpha: 1)
+        view.attributedPlaceholder = NSAttributedString(string: "Senha...",
+                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         return view
     }()
     
@@ -45,7 +51,7 @@ final class LoginView: UIView {
         view.setTitle("Log in", for: .normal)
         view.setTitleColor(.white, for: .normal)
         view.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
-        view.backgroundColor = .link
+        view.backgroundColor = #colorLiteral(red: 0.3669571579, green: 0.2636830509, blue: 0.3215260208, alpha: 1)
         view.layer.cornerRadius = 12
         view.layer.masksToBounds = true
         return view
@@ -84,7 +90,7 @@ extension LoginView {
     // MARK: - Private methods
     
     private func setupLayout() {
-        backgroundColor = .white
+        backgroundColor = #colorLiteral(red: 0.1529260874, green: 0.1529496312, blue: 0.1529181004, alpha: 1)
         
         addSubviews([logoImageView, emailTextField,
                      passwordTextField, loginButton, googleSignInButton], constraints: true)

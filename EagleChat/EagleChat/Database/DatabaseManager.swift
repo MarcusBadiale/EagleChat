@@ -16,9 +16,8 @@ final class DatabaseManager {
     
     public var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .long
         formatter.locale = .current
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         return formatter
     }
 }
